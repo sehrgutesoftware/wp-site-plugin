@@ -11,6 +11,8 @@
 namespace Sehrgut\WpSitePlugin;
 
 require_once('tasks/Task.php');
+require_once('tasks/CreateOptionsPages.php');
+require_once('tasks/FooterScripts.php');
 require_once('tasks/RegisterTaxonomies.php');
 require_once('tasks/RegisterPostTypes.php');
 
@@ -30,6 +32,8 @@ class Plugin
      * @var array
      */
     protected $tasks = [
+        Tasks\CreateOptionsPages::class,
+        Tasks\FooterScripts::class,
         Tasks\RegisterTaxonomies::class,
         Tasks\RegisterPostTypes::class
     ];
