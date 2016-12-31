@@ -15,6 +15,7 @@ require_once('tasks/CreateOptionsPages.php');
 require_once('tasks/FooterScripts.php');
 require_once('tasks/RegisterTaxonomies.php');
 require_once('tasks/RegisterPostTypes.php');
+require_once('tasks/ContactFormApi.php');
 
 // Prevent user from directly executing this file.
 defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'wp-site-plugin'));
@@ -35,7 +36,8 @@ class Plugin
         Tasks\CreateOptionsPages::class,
         Tasks\FooterScripts::class,
         Tasks\RegisterTaxonomies::class,
-        Tasks\RegisterPostTypes::class
+        Tasks\RegisterPostTypes::class,
+        Tasks\ContactFormApi::class,
     ];
 
     /**
