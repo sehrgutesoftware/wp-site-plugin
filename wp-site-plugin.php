@@ -10,11 +10,15 @@
 
 namespace Sehrgut\WpSitePlugin;
 
+// Require Models
+require_once('models/Model.php');
+require_once('models/ExampleModel.php');
+
+// Require Tasks
 require_once('tasks/Task.php');
 require_once('tasks/CreateOptionsPages.php');
 require_once('tasks/FooterScripts.php');
 require_once('tasks/RegisterTaxonomies.php');
-require_once('tasks/RegisterPostTypes.php');
 require_once('tasks/ContactFormApi.php');
 
 // Prevent user from directly executing this file.
@@ -28,6 +32,15 @@ class Plugin
     public static $plugin_path;
 
     /**
+     * All Models to be loaded.
+     *
+     * @var array
+     */
+    protected $models = [
+        Models\ExampleModel::class,
+    ];
+
+    /**
      * List all the tasks to be loaded.
      *
      * @var array
@@ -36,7 +49,6 @@ class Plugin
         Tasks\CreateOptionsPages::class,
         Tasks\FooterScripts::class,
         Tasks\RegisterTaxonomies::class,
-        Tasks\RegisterPostTypes::class,
         Tasks\ContactFormApi::class,
     ];
 
@@ -46,6 +58,13 @@ class Plugin
      * @var array
      */
     protected $task_instances = [];
+
+    /**
+     * Contains the instantiated models.
+     *
+     * @var array
+     */
+    protected $model_instances = [];
 
     public function __construct()
     {
@@ -67,6 +86,7 @@ class Plugin
     public function bootstrap()
     {
         $this->loadTextdomain();
+        $this->loadModels();
         $this->loadTasks();
     }
 
@@ -88,6 +108,18 @@ class Plugin
     protected function loadTextdomain()
     {
         load_plugin_textdomain('wp-site-plugin', null, 'wp-site-plugin/languages');
+    }
+
+    /**
+     * Instantiate each model.
+     *
+     * @return void
+     */
+    protected function loadModels()
+    {
+        foreach ($this->models as $model) {
+            $this->model_instances[] = new $model();
+        }
     }
 
     /**
