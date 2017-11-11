@@ -3,7 +3,7 @@
 namespace Sehrgut\WpSitePlugin\Models;
 
 // Prevent user from directly executing this file.
-defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'zs-verlag-plugin'));
+defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'wp-site-plugin'));
 
 class ExampleModel extends Model
 {
@@ -49,7 +49,7 @@ class ExampleModel extends Model
         return [
             [
                 'key' => 'field_12ff1b9b0300',
-                'label' => __('This is a Tab', 'zs-verlag-plugin'),
+                'label' => __('This is a Tab', 'wp-site-plugin'),
                 'type' => 'tab'
             ]
         ];

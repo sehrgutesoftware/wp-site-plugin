@@ -3,7 +3,7 @@
 namespace Sehrgut\WpSitePlugin\Models;
 
 // Prevent user from directly executing this file.
-defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'zs-verlag-plugin'));
+defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'wp-site-plugin'));
 
 /**
  * Base Class for a model.
@@ -85,7 +85,7 @@ abstract class Model
     {
         acf_add_local_field_group([
             'key' => sprintf('post_type_%s', $this->name),
-            'title' => sprintf(_x('%s Admin', 'Name of the field group for post type', 'zs-verlag-plugin'), ucfirst($this->name)),
+            'title' => sprintf(_x('%s Admin', 'Name of the field group for post type', 'wp-site-plugin'), ucfirst($this->name)),
             'fields' => $this->getCustomFields(),
             'style' => 'seamless',
             'location' => [
