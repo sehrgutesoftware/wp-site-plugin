@@ -21,9 +21,6 @@ require_once('tasks/FooterScripts.php');
 require_once('tasks/RegisterTaxonomies.php');
 require_once('tasks/ContactFormApi.php');
 
-// Prevent user from directly executing this file.
-defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'wp-site-plugin'));
-
 /**
  * This class is just a loader for all the registered `$tasks`.
  */

@@ -2,9 +2,6 @@
 
 namespace Sehrgut\WpSitePlugin\Tasks;
 
-// Prevent user from directly executing this file.
-defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'wp-site-plugin'));
-
 /**
  *  Define custom post taxonomies in this task.
  */

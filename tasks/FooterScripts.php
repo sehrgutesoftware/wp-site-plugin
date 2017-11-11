@@ -2,9 +2,6 @@
 
 namespace Sehrgut\WpSitePlugin\Tasks;
 
-// Prevent user from directly executing this file.
-defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'wp-site-plugin'));
-
 /**
  * Add a global field to the "Integrations" options page to allow
  * the user to add custom code to the page footer.

@@ -5,9 +5,6 @@ namespace Sehrgut\WpSitePlugin\Tasks;
 use \WP_REST_Request;
 use \WP_REST_Response;
 
-// Prevent user from directly executing this file.
-defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'wp-site-plugin'));
-
 /**
  * Add an Endpoint to the WP REST API to handle a contact
  * form and send out an email to the admin of the site.

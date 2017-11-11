@@ -2,9 +2,6 @@
 
 namespace Sehrgut\WpSitePlugin\Tasks;
 
-// Prevent user from directly executing this file.
-defined('ABSPATH') or die(__('Mach koan Schmarrn!', 'wp-site-plugin'));
-
 /**
  *  Create custom options pages using ACF
  */
