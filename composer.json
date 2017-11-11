@@ -1,6 +1,6 @@
 {
     "name": "sehrgut/wp-site-plugin",
-    "description": "Plugin defining model logic and other customizations for a WP site",
+    "description": "Boilerplate for site-specific business logic and customization",
     "type": "wordpress-plugin",
     "license": "MIT",
     "authors": [
