@@ -47,7 +47,7 @@ Individual customisations are defined in tasks, to keep everything more understa
 1. Create a copy of `tasks/ExampleTask.php` and give it a proper name
 2. Set the same name as class name for the Task
 3. Register your hooks and filters using `protected $hooks`, along the lines of the examples
-4. Register the task in your main plugin file by `require`ing it, and listing it in `protecdes $tasks`
+4. Register the task in your main plugin file by `require`ing it, and listing it in `protected $tasks`
 
 ### Models
 
